@@ -110,7 +110,7 @@ class ColorContrast {
 
 class QuoteGenerate {
   constructor (botToken) {
-    this.telegram = new Telegram(botToken)
+    //this.telegram = new Telegram(botToken)
   }
 
   async avatarImageLatters (letters, color) {
@@ -424,11 +424,14 @@ class QuoteGenerate {
         customEmojiIds.push(word.customEmojiId)
       }
     }
-
-    const getCustomEmojiStickers = await this.telegram.callApi('getCustomEmojiStickers', {
+    let getCustomEmojiStickers;
+    try{
+      getCustomEmojiStickers = await this.telegram.callApi('getCustomEmojiStickers', {
       custom_emoji_ids: customEmojiIds
     }).catch(() => {})
-
+    }catch(e){
+      console.log(e)
+    }
     const customEmojiStickers = {}
 
     const loadCustomEmojiStickerPromises = []

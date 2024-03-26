@@ -33,7 +33,7 @@ app.use(ratelimit({
   max: 20,
   disableHeader: false,
   whitelist: (ctx) => {
-    return ctx.query.botToken === process.env.BOT_TOKEN
+    return ctx.query.botToken === 'a'
   },
   blacklist: (ctx) => {
   }
@@ -49,7 +49,7 @@ route.use('/*', routes.routeApi.routes())
 
 app.use(route.routes())
 
-const port = process.env.PORT || 3000
+const port = 4888
 
 app.listen(port, () => {
   console.log('Listening on localhost, port', port)

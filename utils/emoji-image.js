@@ -54,7 +54,7 @@ async function downloadEmoji (brand) {
         let brandFolderName = brand
         if (brand === 'blob') brandFolderName = 'google'
 
-        const fileUrl = `${process.env.EMOJI_DOMAIN}/thumbs/60/${brandFolderName}/${brandFoledIds[brand]}/${emoji.image.file_name}`
+        const fileUrl = `https://emojipedia.org/thumbs/60/${brandFolderName}/${brandFoledIds[brand]}/${emoji.image.file_name}`
 
         const img = await loadImageFromUrl(fileUrl, (headers) => {
           return !headers['content-type'].match(/image/)

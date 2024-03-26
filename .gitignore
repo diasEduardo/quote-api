@@ -60,7 +60,7 @@ typings/
 # next.js build output
 .next
 
-assets/fonts/*
-assets/emojis/*
+# assets/fonts/*
+# assets/emojis/*
 
 !.gitkeep

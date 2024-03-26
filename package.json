@@ -20,7 +20,6 @@
   "homepage": "https://github.com/LyoSU/quote-api#readme",
   "dependencies": {
     "canvas": "2.11.0",
-    "dotenv": "^7.0.0",
     "emoji-db": "^14.0.1",
     "jimp": "^0.16.1",
     "jsdom": "^16.5.3",
@@ -37,7 +36,8 @@
     "runes": "^0.4.3",
     "sharp": "^0.31.3",
     "smartcrop-sharp": "^2.0.7",
-    "telegraf": "^3.38.0"
+    "telegraf": "^3.38.0",
+    "@sharpen/sharp-linux-x64":"^0.0.1-alpha.1"
   },
   "devDependencies": {
     "eslint": "^8.6.0",
